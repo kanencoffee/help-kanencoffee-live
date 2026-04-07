@@ -10,10 +10,6 @@ Disallow: /README.md
 Disallow: /LICENSE
 Disallow: /CNAME
 
-# 🔵 Avoid duplicate indexing of anchors (e.g. #q1, #q2)
-# (Google ignores fragments by default, but this helps clarify intent.)
-Clean-param: #q1&q2&q3&q4&q5&q6&q7&q8&q9&q10&q11&q12&q13&q14&q15&q16&q17&q18&q19&q20
-
 # 🤖 Explicit AI crawler permissions (for transparency)
 User-agent: GPTBot
 Allow: /
