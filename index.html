@@ -309,7 +309,7 @@
       "name": "How do I fix a grinder jam when the motor only hums?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Unplug the grinder, pull the hopper, vacuum out beans, and fish out stones or screws. Remove the upper burr carrier, brush burrs clean, clear the chute, then reinstall and dial coarser before pulsing back to life. If it stays stuck the capacitor or burr carrier needs professional service."
+        "text": "Unplug immediately and remove the hopper. For standalone grinders (Mazzer, Eureka, Baratza): remove the upper burr, brush both burrs clean, clear the chute, reinstall, dial coarser, and pulse back to life. If the motor hums but burrs won't spin, the start capacitor has likely failed. For super-automatics: DeLonghi — use the grind adjustment key to turn toward coarse; Jura — drop cleaning tablets in and run a cleaning cycle; Saeco/Philips — use the included cleaning wand; Breville — twist the upper conical burr counterclockwise to remove and brush clean. Never use oily or flavored beans in super-automatics, and only adjust grind while the grinder is running."
       }
     },
     {
@@ -341,7 +341,31 @@
       "name": "How do I fix a brew unit that is stuck, jammed, or won't eject the puck?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Open the side door, pull out the brew unit, rinse under warm running water, air dry 30 minutes, then apply food-grade silicone grease to the sliding rails."
+        "text": "Turn off and unplug the machine. DeLonghi ECAM: press the PUSH button while pulling the handle; if stuck mid-cycle, push down the manual release lever. Saeco/Philips: press the release tab and pull straight out. Jura brew units are not user-removable — try a power cycle reset or enter service mode (hold Rinse during power-on). Breville Oracle: twist the brew group counterclockwise to unlock. Gaggia: same as Saeco. Siemens/Bosch: press the red release button, or manually turn the white drive gear counterclockwise. Always lubricate with food-safe silicone grease after cleaning."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What causes a brew group drive motor to fail on a super-automatic?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Common causes are worn motor brushes, burned windings from forcing a seized brew unit, stripped output gears, or a failed driver transistor on the main PCB. Listen during power-on: complete silence means electrical failure; motor spinning but nothing moving means a stripped gear. Test motor resistance with a multimeter (typical range 5-30 ohms). Always lubricate the brew unit before reinstalling after motor replacement."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is my brew group making grinding or clicking noises?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Grinding, clicking, or crunching noises during brew group cycling indicate stripped, cracked, or worn drive gear teeth. Rhythmic clicking means teeth are skipping; continuous grinding means gears are no longer meshing properly. Stop using the machine immediately to prevent further damage. On DeLonghi, look for white plastic shavings in the cavity. On Breville Oracle, the drive coupling is a designed wear item. Lubricate the brew unit every 500 cycles to prevent gear wear."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does my brew group stop mid-cycle or not fully close?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The brew group fails to complete its travel due to compacted grounds creating friction, a weak drive motor, faulty position sensor, swollen o-rings, or insufficient lubrication. Remove and clean the brew unit, lubricate generously, and inspect o-rings. A wet or soupy puck means the piston is not compressing fully — try increasing coffee strength and adjusting grind finer. If the problem persists, the piston seal or position sensor may need replacement."
       }
     },
     {
@@ -1228,8 +1252,10 @@
           <li><a href="#q12">Machine making loud noises</a></li>
           <li><a href="#q15">Display shows error codes</a></li>
           <li><a href="#q17">Portafilter stuck/won't lock</a></li>
-          <li><a href="#q18">Machine won't turn on</a></li>
-          <li><a href="#q20">Repair vs. replacement?</a></li>
+          <li><a href="#superauto-brew-unit-jam">Brew unit stuck (by brand)</a></li>
+          <li><a href="#motor-drive-failure">Drive motor failure</a></li>
+          <li><a href="#brew-group-grinding-noise">Brew group clicking/grinding</a></li>
+          <li><a href="#brew-group-incomplete-cycle">Brew group stops mid-cycle</a></li>
         </ul>
       </div>
       
@@ -1715,18 +1741,58 @@
 
       <a id="grinder-jam" class="anchor-tag" aria-hidden="true"></a>
       <div class="faq-item" id="q25" data-category="grinder">
-        <h2>25. My grinder is jammed and the motor just hums.</h2>
+        <h2>25. Grinder jammed, stuck, or motor just hums</h2>
         <div class="faq-answer">
-          <div class="causes-list"><strong>Causes:</strong> Bean fragments wedged between burrs, foreign objects (stones, screws), oily beans compacted in the chute, or mis-seated burr carrier.</div>
+          <div class="causes-list"><strong>Causes:</strong> Bean fragments or foreign objects (stones, twigs, screws) wedged between burrs; oily/flavored beans compacted in the chute; mis-seated burr carrier; motor thermal overload; failed start capacitor (very common on standalone grinders); compacted fines buildup between burrs.</div>
           <div class="solution-list">
-            <strong>Solution:</strong><br>
-            • Cut power immediately, remove the hopper, and scoop/vacuum out beans above the burrs<br>
-            • Inspect the burr chamber for stones or screws and pull them with tweezers<br>
-            • Remove the upper burr carrier, scrub both burrs, and clear the chute with a brush or compressed air<br>
-            • Reinstall the carrier, dial all the way coarser, and pulse the grinder while lightly tapping the case<br>
-            • Once it spins freely, dial back to your setting and purge a small dose to confirm smooth feed
-            <br><br>
-            <em>Still jammed? The motor capacitor or burr carrier may be damaged—schedule service so we can rebuild it.</em>
+            <strong>Standalone grinders (Mazzer, Eureka, Baratza, Niche, Ceado, Mahlkonig):</strong><br>
+            1. Unplug immediately.<br>
+            2. Remove the hopper and all beans. Mazzer/Eureka: twist hopper counterclockwise. Baratza: lift the hopper latch.<br>
+            3. Inspect the burr chamber for foreign objects — use the cleaning brush or a wooden skewer, never fingers.<br>
+            4. Remove upper burr: Baratza Encore/Virtuoso: twist upper burr holder counterclockwise and lift. Mazzer Mini/Super Jolly: remove hopper collar screws and lift carrier. Eureka Mignon: twist adjustment ring fully counterclockwise until upper burr lifts out.<br>
+            5. Brush out all compacted grounds from both burr surfaces and the exit chute.<br>
+            6. If using oily or flavored beans: run Grindz (Urnex) or dry instant rice through to absorb oils.<br>
+            7. Allow 15–20 minutes for thermal overload to reset if the motor got hot.<br>
+            8. Reassemble and test. If motor still hums but burrs don't spin: the start capacitor has likely failed (the #1 standalone grinder motor fault — cheap to replace).<br>
+            9. If completely silent (no hum): check power cord, switch, wiring. Dead silent = motor winding failure.<br><br>
+
+            <strong>De'Longhi super-automatics (ECAM, Magnifica, Dinamica, Eletta):</strong><br>
+            • Turn off and unplug. Remove bean hopper (twist counterclockwise and lift).<br>
+            • Look into the grinder throat for foreign objects — extract with needle-nose pliers.<br>
+            • Insert the grind adjustment key into the slot inside the hopper area. Turn toward "coarse" to free seized burrs, then back to your setting.<br>
+            • If the dial won't turn: vacuum the grinder throat to extract loose fines, then try again.<br><br>
+
+            <strong>Jura (ENA, E-line, S-line, Z-line, Impressa, GIGA):</strong><br>
+            • Jura uses ceramic burrs — not easily user-accessible.<br>
+            • Grind adjustment: open bean hopper lid, locate the dial (dots or numbers), turn one click toward coarse WHILE the grinder is running.<br>
+            • If jammed: remove all beans, drop Jura cleaning tablets into the hopper, run a cleaning cycle.<br>
+            • For persistent jams: upper burr accessed by removing hopper assembly (varies by model). Clean both burrs with a stiff brush.<br><br>
+
+            <strong>Saeco / Philips (Xelsis, PicoBaristo, 3200, 4300, 5400):</strong><br>
+            • Remove bean hopper. Adjust grind dial (inside hopper area) only while grinder is running.<br>
+            • Use the included grinder cleaning tool (plastic wand) to push into grinder throat and dislodge stuck grounds.<br>
+            • EP-series: grinder block partially accessible after removing top cover (4 screws on 4300, clips on 3200).<br><br>
+
+            <strong>Breville / Sage (Barista Express, Barista Pro, Oracle):</strong><br>
+            • Remove hopper (twist and lift on Barista Express; release latch on Oracle).<br>
+            • Upper conical burr lifts out by twisting counterclockwise. Brush clean.<br>
+            • Check lower burr (fixed) — sweep out compacted grounds from the gap.<br>
+            • If grind dial is hard to turn: vacuum around the dial and turn back and forth to free it.<br>
+            • Oracle: if grinder runs but no grounds reach brew group, check the dosing funnel for clogs.<br><br>
+
+            <strong>Gaggia (Anima, Babila, Cadorna):</strong><br>
+            • Same grinder platform as Saeco — follow the Saeco procedure above.<br><br>
+
+            <strong>Melitta / Siemens / Bosch:</strong><br>
+            • Remove bean hopper, vacuum grinder throat, adjust dial to coarsest and back.<br>
+            • Siemens EQ.9: grinder assembly accessible after removing top panel (Torx T15). Brush both burrs.<br><br>
+
+            <strong>General tips — all grinders:</strong><br>
+            • Never use oily, flavored, or sugar-coated beans in a super-automatic — they clog rapidly.<br>
+            • Run Grindz or manufacturer cleaning tablets monthly with medium-to-dark roasts.<br>
+            • Only adjust grind while the grinder is running — adjusting when stopped can crack ceramic burrs or jam steel burrs.<br><br>
+
+            <em>Still jammed? The motor capacitor, burr carrier, or drive gear may be damaged — <a href="https://www.kanencoffee.com/book-appointment" style="color: #c84b31;">book a service appointment</a> so we can rebuild it.</em>
           </div>
         </div>
       </div>
@@ -1844,16 +1910,144 @@
         <div class="faq-item">
           <h2>Brew unit stuck, jammed, or won't eject the puck</h2>
           <div class="faq-answer">
-            <div class="causes-list"><strong>Causes:</strong> Coffee oil and grounds buildup seizing the brew unit slides; dried O-rings; physical cracking from forcing the unit when stiff.</div>
+            <div class="causes-list"><strong>Causes:</strong> Coffee oil and grounds buildup seizing the brew unit slides; dried O-rings; failed drive motor or stripped gear; power interruption during a brew cycle; physical cracking from forcing the unit when stiff.</div>
             <div class="solution-list">
-              <strong>Solution:</strong><br>
-              • Open the side door and pull out the brew unit (De'Longhi: left side; Saeco/Philips: right side; Jura E/S series: front panel after pressing the maintenance button)<br>
-              • Rinse under warm — not hot — running water. Never put it in the dishwasher<br>
-              • Air dry 30 minutes, then apply 2–3 drops of food-grade silicone grease to the sliding rails<br>
-              • Run a cleaning tablet cycle to clear internal residue<br>
-              • If completely stuck: power off, wait 2 minutes, power on — some machines unlock the brew unit on restart<br>
-              • <strong>Never force it</strong> — forcing cracks the plastic drive arm<br>
-              • If the unit won't come out after all steps: <a href="https://www.kanencoffee.com/book-appointment" style="color: #c84b31;">book a service appointment</a>
+              <strong>General — all brands:</strong><br>
+              1. Turn off and unplug the machine. Wait at least 30 seconds.<br>
+              2. Never force the brew unit — forcing cracks the plastic drive arm.<br>
+              3. Never run the brew unit through a dishwasher.<br>
+              4. Lubricate every 500 cycles or when the machine prompts. Use only food-safe silicone grease (Dow Corning 111 or equivalent).<br><br>
+
+              <strong>De'Longhi (ECAM, Magnifica, Dinamica, Eletta):</strong><br>
+              • Open the service door on the right side.<br>
+              • Press the PUSH button firmly while pulling the handle toward you. Wiggle gently left-right if it resists.<br>
+              • If stuck mid-cycle: reach behind the brew unit and push down the manual release lever (small plastic tab) while pulling out.<br>
+              • Once removed: rinse under warm water, brush compacted grounds from the piston, upper screen, and side rails.<br>
+              • Lubricate both side guide rails and the central piston rod. Clean the machine cavity with a long brush or vacuum.<br>
+              • Slide back in until it clicks. Power on and let the initialization cycle run.<br><br>
+
+              <strong>Saeco / Philips (Xelsis, PicoBaristo, 3200, 4300, 5400):</strong><br>
+              • Open the service door on the right side. Press the release tab (red or gray) and pull straight out.<br>
+              • HD87xx/HD86xx: press both side latches simultaneously. EP-series (3200/4300/5400): press the single PUSH button.<br>
+              • Rinse, clean upper and lower filters, brush out grounds chamber.<br>
+              • Check the drip tray sensor — a full or misaligned drip tray blocks the brew unit from resetting on Philips models.<br>
+              • Lubricate side rails and o-rings. Reinstall and run a rinse cycle.<br><br>
+
+              <strong>Jura (ENA, A-line, E-line, S-line, Z-line, Impressa, GIGA):</strong><br>
+              • Jura brew units are <strong>NOT user-removable</strong>. Do not attempt to force them out.<br>
+              • Power cycle reset: turn off, unplug for 60 seconds, plug back in, power on. The machine will try to re-home the brew unit.<br>
+              • If that fails — service mode: turn off, press and hold the Rinse button, turn on while holding Rinse, release after 5 seconds. Select "Brew Unit" → "Initialize" or "Reset."<br>
+              • Impressa models: hold Menu + Right Arrow during power-on instead.<br>
+              • If the software reset doesn't work, a Jura-authorized technician with the Service Smart tool is needed.<br><br>
+
+              <strong>Breville / Sage (Oracle, Oracle Touch, Barista Touch):</strong><br>
+              • Remove the drip tray and lower panel (two thumbscrews). Twist the brew group counterclockwise to unlock, pull straight out.<br>
+              • Check for grounds packed around the upper piston seal. Clean with a damp cloth and soft brush.<br>
+              • Inspect the drive coupling (plastic gear between motor and brew group). If teeth are worn/stripped, replace (Breville part BES980/15.7).<br>
+              • Lubricate piston o-rings, reassemble, run a cleaning cycle.<br><br>
+
+              <strong>Gaggia (Anima, Babila, Cadorna, Accademia):</strong><br>
+              • Same platform as Saeco. Open service door on the right.<br>
+              • Anima: press PUSH and pull. Babila/Cadorna: press side release tabs.<br>
+              • If stuck mid-cycle: unplug, press and hold the brew button for 10 seconds (discharges drive motor), then try release.<br><br>
+
+              <strong>Melitta (Caffeo CI, Barista, Avanza, Solo):</strong><br>
+              • Open the front service panel (pull toward you at the bottom — hinged at top).<br>
+              • Press the release lever and pull straight out on rails.<br>
+              • Check for swollen o-rings (known issue with citric acid descaler on pre-2024 Caffeo CI/Barista models). Replace with Melitta-spec o-rings.<br><br>
+
+              <strong>Siemens / Bosch (EQ series, Vero series):</strong><br>
+              • Open front service door. Press the red release button and pull out.<br>
+              • If jammed mid-cycle: unplug, manually turn the white drive gear (visible inside cavity) counterclockwise to retract the brew unit to home position.<br><br>
+
+              • If the drive motor runs but the brew unit doesn't move (any brand): the drive gear is likely stripped — see our drive motor failure guide below.<br>
+              • Still stuck? <a href="https://www.kanencoffee.com/book-appointment" style="color: #c84b31;">Book a service appointment</a>
+            </div>
+          </div>
+        </div>
+
+        <a id="motor-drive-failure" class="anchor-tag" aria-hidden="true"></a>
+        <div class="faq-item">
+          <h2>Brew group drive motor not engaging</h2>
+          <div class="faq-answer">
+            <div class="causes-list"><strong>Causes:</strong> Worn motor brushes; burned windings from a seized brew unit overheating the motor; stripped output gear (motor spins but doesn't drive the gear train); failed motor relay or driver transistor on the main PCB; corroded motor harness connector.</div>
+            <div class="solution-list">
+              <strong>Diagnosing the motor vs. the gear train:</strong><br>
+              • Listen during power-on initialization. Complete silence = electrical failure (motor, relay, or PCB). Motor hums/spins but nothing moves = stripped gear.<br>
+              • Disconnect motor harness and test with a multimeter: typical DC drive motors read 5–30 ohms. Open circuit = burned winding. Under 1 ohm = shorted winding.<br><br>
+
+              <strong>De'Longhi ECAM:</strong> Remove rear panel (4–6 screws). Motor is on the left side, connected via worm gear. Test 2-pin harness (expect 8–15 ohms). Motor held by 2 screws, worm gear press-fits onto shaft.<br><br>
+
+              <strong>Jura:</strong> Motor is buried deep — requires significant disassembly (top cover, side panels, brew unit cradle). Uses geared DC motor with optical encoder. After motor replacement, the Jura Service Smart tool is required to recalibrate brew unit position.<br><br>
+
+              <strong>Saeco / Philips:</strong> Remove top panel (3–4 screws). Motor on the right side. Expect 10–20 ohms. Replacement is a direct swap — 2 screws, 1 connector. Motors fail frequently after running without lubrication.<br><br>
+
+              <strong>Breville Oracle:</strong> Motor accessed from machine bottom (remove base plate). Drive coupling (plastic gear) is a designed wear item — check it before replacing the motor itself.<br><br>
+
+              <strong>Siemens / Bosch EQ:</strong> Remove top panel. Motor on the left side driving the white gear visible through service door.<br><br>
+
+              <strong>Important:</strong> If you smell burning or see smoke, stop immediately. A burned motor can damage the PCB driver circuit — test both the motor AND the driver transistor on the main board.<br>
+              • Always lubricate the brew unit before reinstalling after a motor replacement.<br>
+              • This is an advanced repair — <a href="https://www.kanencoffee.com/book-appointment" style="color: #c84b31;">book a service appointment</a> if you're not comfortable with electrical testing.
+            </div>
+          </div>
+        </div>
+
+        <a id="brew-group-grinding-noise" class="anchor-tag" aria-hidden="true"></a>
+        <div class="faq-item">
+          <h2>Brew group making grinding, clicking, or crunching noises</h2>
+          <div class="faq-answer">
+            <div class="causes-list"><strong>Causes:</strong> Drive gears have stripped, cracked, or worn teeth. Running the brew unit without lubrication accelerates gear wear. A jammed brew unit forced through can strip gear teeth in a single event.</div>
+            <div class="solution-list">
+              <strong>Identifying the noise:</strong><br>
+              • Single click at start of cycle = normal solenoid actuation<br>
+              • Rhythmic clicking throughout cycle = stripped gear teeth (mesh-skip-mesh-skip)<br>
+              • Continuous grinding = gear fully stripped, teeth no longer engaging properly<br>
+              • Loud crack followed by free-spinning = gear shattered, immediate replacement needed<br><br>
+
+              <strong>De'Longhi ECAM:</strong> Remove brew unit, inspect main drive gear inside cavity for white plastic shavings (confirms stripped teeth). Worm gear on motor shaft meshes with a spur gear — if either is damaged, replace both. Requires rear panel removal.<br><br>
+
+              <strong>Jura:</strong> Gear noise is a very common service call. Enter service mode (Rinse held during power-on) and run initialization. Where the clicking occurs in the travel (beginning/middle/end) tells the technician which gear is damaged. Professional repair required.<br><br>
+
+              <strong>Saeco / Philips:</strong> Remove brew unit, inspect gear teeth on drive shaft. Saeco uses a simpler gear train — motor pinion meshes directly with ring gear. Replacement is more accessible (top panel + 2 screws).<br><br>
+
+              <strong>Breville Oracle:</strong> Noise is usually the drive coupling (designed wear item). Remove brew group, inspect coupling gear, replace if worn (Breville part BES980/15.7).<br><br>
+
+              <strong>Siemens / Bosch EQ:</strong> White drive gear visible through service door is the most common noise source. Can be replaced without removing the motor — pop off retaining clip, slide off old gear, press on new one.<br><br>
+
+              • After replacing any gears, lubricate the brew unit thoroughly before reinstalling.<br>
+              • <a href="https://www.kanencoffee.com/book-appointment" style="color: #c84b31;">Book a service appointment</a> for gear replacement on Jura or complex disassembly.
+            </div>
+          </div>
+        </div>
+
+        <a id="brew-group-incomplete-cycle" class="anchor-tag" aria-hidden="true"></a>
+        <div class="faq-item">
+          <h2>Brew group stops mid-cycle or doesn't fully close</h2>
+          <div class="faq-answer">
+            <div class="causes-list"><strong>Causes:</strong> Compacted grounds creating friction the drive motor can't overcome; weak motor (worn brushes); position sensor misaligned or faulty; swollen o-rings or warped piston; insufficient lubrication; foreign object partially blocking the path.</div>
+            <div class="solution-list">
+              <strong>Quick fixes to try first (all brands):</strong><br>
+              • Remove the brew unit and clean thoroughly — packed grounds at specific points cause jams at that position in travel.<br>
+              • Lubricate generously: side rails, central piston rod, and all o-rings.<br>
+              • Inspect o-rings — swollen, cracked, or hardened o-rings create inconsistent friction. Replace any questionable ones.<br>
+              • Clean the brew unit housing inside the machine with a vacuum.<br><br>
+
+              <strong>De'Longhi ECAM:</strong> The brew unit has a position pin that rides in a cam groove. If grounds pack into the groove, it jams at a specific point. Clean with a thin brush. Also check the microswitch at the back of the cavity.<br><br>
+
+              <strong>Jura:</strong> In service mode, run brew unit diagnostic — display shows motor current draw. A spike at a specific position indicates physical resistance. An incomplete cycle that always fails at the same point usually indicates a dirty optical encoder.<br><br>
+
+              <strong>Saeco / Philips:</strong> Check the drip tray switch — Saeco machines abort if the drip tray sensor is triggered. EP-series: run "Brew unit initialization" in maintenance menu.<br><br>
+
+              <strong>Breville Oracle:</strong> Check drive coupling for partial stripping. Also inspect the tamper piston — misalignment creates uneven resistance during compression.<br><br>
+
+              <strong>Siemens / Bosch EQ:</strong> Turn white drive gear counterclockwise to return to home position. On EQ.9, check the drain valve — a stuck valve prevents pressurization and causes mid-cycle abort.<br><br>
+
+              <strong>Wet or soupy puck (all brands):</strong><br>
+              • Worn piston seal = not enough pressure on the coffee puck<br>
+              • Grind too coarse or dose too low — increase strength to max, adjust grind one step finer<br>
+              • If puck is still soupy at max settings, piston seal needs replacement<br>
+              • <a href="https://www.kanencoffee.com/book-appointment" style="color: #c84b31;">Book a service appointment</a> for sensor or seal replacement.
             </div>
           </div>
         </div>
