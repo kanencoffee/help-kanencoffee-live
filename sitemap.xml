@@ -5,28 +5,56 @@
   <!-- Main Troubleshooting Guide -->
   <url>
     <loc>https://help.kanencoffee.com/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-04-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- Grinder Troubleshooting -->
+  <!-- Brand Hubs — high priority, drive brand-search traffic -->
   <url>
-    <loc>https://help.kanencoffee.com/grinder-issues.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <loc>https://help.kanencoffee.com/delonghi-magnifica-troubleshooting.html</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://help.kanencoffee.com/jura-espresso-machine-troubleshooting.html</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://help.kanencoffee.com/breville-barista-express-troubleshooting.html</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://help.kanencoffee.com/saeco-espresso-machine-troubleshooting.html</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://help.kanencoffee.com/rancilio-silvia-troubleshooting.html</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- Error code specific landing pages -->
+  <url>
+    <loc>https://help.kanencoffee.com/saeco-error-268.html</loc>
+    <lastmod>2026-04-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
-  <!-- Breville Solenoid Valve Guide -->
-  <url>
-    <loc>https://help.kanencoffee.com/breville-solenoid-valve.html</loc>
-    <lastmod>2026-04-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Lelit Espresso Machine Troubleshooting -->
+  <!-- Existing brand pages -->
   <url>
     <loc>https://help.kanencoffee.com/lelit-espresso-machine-troubleshooting.html</loc>
     <lastmod>2026-04-06</lastmod>
@@ -34,9 +62,23 @@
     <priority>0.9</priority>
   </url>
 
-  <!-- La Marzocco Espresso Machine Service -->
   <url>
     <loc>https://help.kanencoffee.com/la-marzocco-espresso-machine.html</loc>
+    <lastmod>2026-04-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Problem-specific guides -->
+  <url>
+    <loc>https://help.kanencoffee.com/grinder-issues.html</loc>
+    <lastmod>2026-04-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://help.kanencoffee.com/breville-solenoid-valve.html</loc>
     <lastmod>2026-04-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -45,7 +87,7 @@
   <!-- LLMs.txt for AI discoverability -->
   <url>
     <loc>https://help.kanencoffee.com/llms.txt</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-04-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
