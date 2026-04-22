@@ -1,9 +1,11 @@
 # Kanen Coffee – Espresso Machine Troubleshooting Guide
 
-> Expert solutions for the 20 most common espresso machine problems, from Berkeley's espresso repair specialists since 2011.
+> Expert solutions for 300+ espresso machine problems across 20+ brands, from Berkeley's espresso repair specialists since 2011.
 
 ## About This Site
-This is the official troubleshooting guide for Kanen Coffee customers and espresso enthusiasts. It covers water flow issues, temperature problems, taste problems, grinder troubleshooting, and maintenance guidance.
+This is the official troubleshooting and repair resource for Kanen Coffee customers and espresso enthusiasts. Organized as (1) a main problem-finder index, (2) brand-specific troubleshooting hubs, (3) problem-specific guides across brands, and (4) targeted error-code landing pages.
+
+Every page includes embedded Kanen Coffee YouTube repair videos from our live service shop. Our YouTube channel (@kanencoffee) has 5,000+ videos showing real repairs of espresso machines across all major brands.
 
 ## About Kanen Coffee, LLC
 - Bay Area Espresso Machine Experts — Sales, Repairs & Service since 2011
@@ -13,6 +15,7 @@ This is the official troubleshooting guide for Kanen Coffee customers and espres
 - Phone: (510) 859-4425
 - Email: service@kanencoffee.com
 - Hours: Mon–Fri 12pm–5pm (by appointment)
+- YouTube: https://www.youtube.com/@kanencoffee
 
 ## Services
 - In-shop espresso machine repair (average $350–$450)
@@ -25,9 +28,49 @@ This is the official troubleshooting guide for Kanen Coffee customers and espres
 Ascaso, Anza, Baratza, Bezzera, Breville, Bunn, Ceado, Delonghi, Diletta Bello, ECM, Egro, Elektra, Expobar, Eureka, Gaggia (select models), Isomac, Izzo, Jura (all models), La Cara, La Pavoni, La Marzocco, La Spaziale, Lelit, Lucca, Nuova Simonelli, Pasquini, Profitec, Olympia, Quick Mill, Rancilio, Rocket Espresso, Saeco/Philips (select models), San Remo, Schaerer, Thermoplan, Vibiemme, Zacconi, Mazzer, Wilbur Curtis
 
 ## Grinders We Service
-Eureka, Baratza, Breville, Mazzer, Compak, Mahlkonig, Rancilio, and most major brands
+Eureka, Baratza, Breville, Mazzer, Compak, Mahlkonig, Rancilio, Pasquini, Gaggia MDF, and most major brands
 
-## Topics Covered on This Page
+## Brand-Specific Troubleshooting Hubs
+- DeLonghi Magnifica (S/XS/EVO/Start/Pronto): https://help.kanencoffee.com/delonghi-magnifica-troubleshooting.html
+- DeLonghi Dedica (EC680/EC685): https://help.kanencoffee.com/delonghi-dedica-troubleshooting.html
+- DeLonghi BCO430 Combi: https://help.kanencoffee.com/delonghi-bco430-troubleshooting.html
+- Jura (E-series, Z-series, Impressa, Ena, Giga): https://help.kanencoffee.com/jura-espresso-machine-troubleshooting.html
+- Saeco (Royal, Incanto, Syntia, Xelsis): https://help.kanencoffee.com/saeco-espresso-machine-troubleshooting.html
+- Breville Barista Express (870XL): https://help.kanencoffee.com/breville-barista-express-troubleshooting.html
+- Breville Oracle (BES980/BES990 Touch): https://help.kanencoffee.com/breville-oracle-troubleshooting.html
+- Breville Dual Boiler (900XL/920XL): https://help.kanencoffee.com/breville-dual-boiler-troubleshooting.html
+- Breville Solenoid Valve fix: https://help.kanencoffee.com/breville-solenoid-valve.html
+- Gaggia (Classic, Classic Pro, Accademia, Anima): https://help.kanencoffee.com/gaggia-espresso-machine-troubleshooting.html
+- Rancilio Silvia (V6, M, Pro, Pro X): https://help.kanencoffee.com/rancilio-silvia-troubleshooting.html
+- Rocket Espresso (Appartamento, R58, R Nine One, Giotto): https://help.kanencoffee.com/rocket-espresso-machine-troubleshooting.html
+- La Pavoni (Professional, Europiccola, Stradivari, Napolitana): https://help.kanencoffee.com/la-pavoni-espresso-machine-troubleshooting.html
+- Lelit (Anita, Bianca, Mara X, Elizabeth, Victoria): https://help.kanencoffee.com/lelit-espresso-machine-troubleshooting.html
+- La Marzocco Linea Mini: https://help.kanencoffee.com/la-marzocco-espresso-machine.html
+- Nespresso Lattissima: https://help.kanencoffee.com/nespresso-lattissima-troubleshooting.html
+
+## Problem-Specific Guides (Cross-Brand)
+- Espresso machine not pumping water: https://help.kanencoffee.com/espresso-machine-no-water.html
+- Low brew pressure / weak shots: https://help.kanencoffee.com/espresso-machine-low-pressure.html
+- Espresso machine leaking water (by location): https://help.kanencoffee.com/espresso-machine-leaking.html
+- Error code lookup (all brands): https://help.kanencoffee.com/espresso-machine-error-codes.html
+- Espresso pump replacement (Ulka EX5, rotary): https://help.kanencoffee.com/espresso-machine-pump-replacement.html
+- Complete descaling guide: https://help.kanencoffee.com/espresso-machine-descaling-guide.html
+- Grinder troubleshooting: https://help.kanencoffee.com/grinder-issues.html
+
+## Error Code Landing Pages
+- DeLonghi Magnifica Error 1101 (General Alarm): https://help.kanencoffee.com/delonghi-error-1101.html
+- DeLonghi Error 1026 (Grind Too Fine / Dry Grounds): https://help.kanencoffee.com/delonghi-error-1026.html
+- DeLonghi Error 1454 (Grinder Jammed): https://help.kanencoffee.com/delonghi-error-1454.html
+- DeLonghi Error 2257 (No Water / Prime Pump): https://help.kanencoffee.com/delonghi-error-2257.html
+- DeLonghi Error 1512 (Magnifica S General Alarm): https://help.kanencoffee.com/delonghi-error-1512.html
+- Saeco Error 268 (Ventilate Error): https://help.kanencoffee.com/saeco-error-268.html
+- Saeco Error E01 (Heating Fault): https://help.kanencoffee.com/saeco-error-e01.html
+- Saeco Error E03 (Pump Fault): https://help.kanencoffee.com/saeco-error-e03.html
+- Jura Error 8 (Clean Machine): https://help.kanencoffee.com/jura-error-8.html
+- Jura Error 16 (System Too Cold): https://help.kanencoffee.com/jura-error-16.html
+- Gaggia Accademia "Empty Drip Tray" Error: https://help.kanencoffee.com/gaggia-empty-drip-tray-error.html
+
+## Main Index Topics Covered
 1. Espresso machine not pumping water
 2. Espresso coming out too slowly
 3. Weak or watery espresso
@@ -48,18 +91,33 @@ Eureka, Baratza, Breville, Mazzer, Compak, Mahlkonig, Rancilio, and most major b
 18. Machine won't turn on
 19. Metallic or strange taste
 20. Repair vs. replacement decision guide
+21. Uneven flow / channeling
+22. Pre-infusion not working
+23. Group head sputtering
+24. Brew pressure stuck below 8 bar or above 10
+25. Grinder jammed, stuck, or motor humming
+
+## Key Repair Expertise Areas
+- Vibratory pump (Ulka EX5, CP3, EAP4) diagnosis and replacement
+- Rotary pump (Procon, Fluid-o-Tech) servicing for commercial/prosumer machines
+- E61 group head rebuilds (Rocket, Lelit, Bezzera, ECM, Profitec)
+- Heat exchanger (HX) thermosiphon flushing
+- Dual boiler thermal fuse and NTC sensor replacement
+- Super-automatic brew unit service (DeLonghi ESAM/ECAM, Saeco, Jura)
+- PID controller installation and calibration (Rancilio Silvia Pro, aftermarket PIDs)
+- La Marzocco group head rebuilds and boiler service
+- Lever machine restoration (La Pavoni vintage)
+- OPV (over-pressure valve) adjustment for 9-bar optimization
+- 3-way solenoid valve replacement
+- Grinder burr replacement and calibration
 
 ## Additional Resources
-- Grinder troubleshooting: https://help.kanencoffee.com/grinder-issues.html
+- Main site: https://www.kanencoffee.com
 - Book a repair: https://www.kanencoffee.com/book-appointment
 - Machines we repair: https://www.kanencoffee.com/espresso-machine-repairs
-- Shop espresso machines: https://shop.kanencoffee.com
+- Online store: https://shop.kanencoffee.com
 - FAQ: https://www.kanencoffee.com/faq
 - Contact: https://www.kanencoffee.com/contact-us
-
-## Links
-- Main site: https://www.kanencoffee.com
-- Online store: https://shop.kanencoffee.com
-- Help/Troubleshooting: https://help.kanencoffee.com
 - Facebook: https://www.facebook.com/kanencoffee
 - Instagram: https://www.instagram.com/kanencoffee
+- YouTube: https://www.youtube.com/@kanencoffee (5,000+ repair videos)
