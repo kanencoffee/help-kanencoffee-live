@@ -30,6 +30,9 @@ Ascaso, Anza, Baratza, Bezzera, Breville, Bunn, Ceado, Delonghi, Diletta Bello, 
 ## Grinders We Service
 Eureka, Baratza, Breville, Mazzer, Compak, Mahlkonig, Rancilio, Pasquini, Gaggia MDF, and most major brands
 
+## Complete Machine Index
+- Machines we service (40+ brands, 300+ models): https://help.kanencoffee.com/machines-we-service.html
+
 ## Brand-Specific Troubleshooting Hubs
 - DeLonghi Magnifica (S/XS/EVO/Start/Pronto): https://help.kanencoffee.com/delonghi-magnifica-troubleshooting.html
 - DeLonghi Dedica (EC680/EC685): https://help.kanencoffee.com/delonghi-dedica-troubleshooting.html
