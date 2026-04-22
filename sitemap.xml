@@ -10,7 +10,10 @@
     <priority>1.0</priority>
   </url>
 
-  <!-- Brand Hubs — high priority, drive brand-search traffic -->
+  <!-- =========================================================
+       PHASE 1: Top 5 Brand Hubs + Saeco Error 268
+       ========================================================= -->
+
   <url>
     <loc>https://help.kanencoffee.com/delonghi-magnifica-troubleshooting.html</loc>
     <lastmod>2026-04-21</lastmod>
@@ -46,7 +49,6 @@
     <priority>0.95</priority>
   </url>
 
-  <!-- Error code specific landing pages -->
   <url>
     <loc>https://help.kanencoffee.com/saeco-error-268.html</loc>
     <lastmod>2026-04-21</lastmod>
@@ -54,7 +56,116 @@
     <priority>0.9</priority>
   </url>
 
-  <!-- Existing brand pages -->
+  <!-- =========================================================
+       PHASE 2: Problem-Specific Landing Pages
+       ========================================================= -->
+
+  <url>
+    <loc>https://help.kanencoffee.com/espresso-machine-no-water.html</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://help.kanencoffee.com/espresso-machine-low-pressure.html</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://help.kanencoffee.com/espresso-machine-leaking.html</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://help.kanencoffee.com/espresso-machine-error-codes.html</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://help.kanencoffee.com/espresso-machine-pump-replacement.html</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://help.kanencoffee.com/espresso-machine-descaling-guide.html</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- =========================================================
+       PHASE 3: Remaining Brand Hubs
+       ========================================================= -->
+
+  <url>
+    <loc>https://help.kanencoffee.com/gaggia-espresso-machine-troubleshooting.html</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://help.kanencoffee.com/rocket-espresso-machine-troubleshooting.html</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://help.kanencoffee.com/la-pavoni-espresso-machine-troubleshooting.html</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://help.kanencoffee.com/delonghi-dedica-troubleshooting.html</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://help.kanencoffee.com/delonghi-bco430-troubleshooting.html</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://help.kanencoffee.com/breville-oracle-troubleshooting.html</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://help.kanencoffee.com/breville-dual-boiler-troubleshooting.html</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://help.kanencoffee.com/nespresso-lattissima-troubleshooting.html</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- =========================================================
+       Existing brand / problem pages
+       ========================================================= -->
+
   <url>
     <loc>https://help.kanencoffee.com/lelit-espresso-machine-troubleshooting.html</loc>
     <lastmod>2026-04-06</lastmod>
@@ -69,7 +180,6 @@
     <priority>0.9</priority>
   </url>
 
-  <!-- Problem-specific guides -->
   <url>
     <loc>https://help.kanencoffee.com/grinder-issues.html</loc>
     <lastmod>2026-04-06</lastmod>
