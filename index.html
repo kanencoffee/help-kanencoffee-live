@@ -46,12 +46,25 @@
   <!-- Google tag (gtag.js) - GA4 Help Center stream -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-K0522MR5KP"></script>
 
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-PTWBK4');</script>
+  <!-- Google Tag Manager (deferred — fires on interaction or 5s) -->
+  <script>
+  (function(){
+    var loaded=false;
+    function loadGTM(){
+      if(loaded)return;loaded=true;
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;
+      j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+      f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-PTWBK4');
+    }
+    ['touchstart','click','keydown','scroll'].forEach(function(e){
+      document.addEventListener(e,loadGTM,{once:true,passive:true});
+    });
+    setTimeout(loadGTM,5000);
+  })();
+  </script>
   <!-- End Google Tag Manager -->
 
   <!-- GA4 config + cross-domain linker -->
@@ -2559,9 +2572,9 @@
 
   <!-- Search logging: set this to your Google Apps Script URL (see README) -->
   <script>window.__SEARCH_LOG_URL = 'https://script.google.com/macros/s/AKfycbz_1_xC6KPBXaFxp5AmAuTLIA7vnmjaViKetxUGsXUtn0Jr0VxJVHMg9sECINWIFMF7kQ/exec';</script>
-  <script src="/search.js"></script>
+  <script src="/search.js" defer></script>
   <script>
-    /* Hamburger toggle */
+    /* Hamburger toggle \u2014 runs immediately (lightweight, interactive element) */
     (function() {
       var btn = document.querySelector('.hamburger');
       var menu = document.getElementById('mobile-menu');
@@ -2573,110 +2586,122 @@
       }
     })();
 
-    /* FAQ accordion */
+    /* FAQ accordion + category setup + CTA injection \u2014 deferred off main thread */
     (function() {
-      var items = document.querySelectorAll('.faq-item');
-      items.forEach(function(item) {
-        var h2 = item.querySelector('h2');
-        if (!h2) return;
-        /* ARIA attributes on page load */
-        h2.setAttribute('role', 'button');
-        h2.setAttribute('tabindex', '0');
-        h2.setAttribute('aria-expanded', 'false');
-        h2.addEventListener('click', function() {
-          item.classList.toggle('expanded');
-          var isExpanded = item.classList.contains('expanded');
-          h2.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
-        });
-        /* Keyboard support: Enter and Space toggle */
-        h2.addEventListener('keydown', function(e) {
-          if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            item.classList.toggle('expanded');
-            var isExpanded = item.classList.contains('expanded');
-            h2.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
-          }
-        });
-      });
+      function setupFAQ() {
+        var items = document.querySelectorAll('.faq-item');
 
-      /* Auto-expand from URL hash */
-      function expandFromHash() {
-        var hash = window.location.hash.replace('#', '');
-        if (!hash) return;
-        var target = document.getElementById(hash);
-        if (target) {
-          var faqItem = target.closest('.faq-item') || target;
-          if (faqItem.classList.contains('faq-item')) {
-            faqItem.classList.add('expanded');
-            var h2 = faqItem.querySelector('h2');
-            if (h2) h2.setAttribute('aria-expanded', 'true');
+        /* ARIA + event listeners \u2014 chunked to avoid long tasks */
+        var i = 0;
+        function processChunk() {
+          var end = Math.min(i + 15, items.length);
+          for (; i < end; i++) {
+            var item = items[i];
+            var h2 = item.querySelector('h2');
+            if (!h2) continue;
+            h2.setAttribute('role', 'button');
+            h2.setAttribute('tabindex', '0');
+            h2.setAttribute('aria-expanded', 'false');
+            h2.addEventListener('click', function() {
+              var it = this.closest('.faq-item');
+              it.classList.toggle('expanded');
+              this.setAttribute('aria-expanded', it.classList.contains('expanded') ? 'true' : 'false');
+            });
+            h2.addEventListener('keydown', function(e) {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                var it = this.closest('.faq-item');
+                it.classList.toggle('expanded');
+                this.setAttribute('aria-expanded', it.classList.contains('expanded') ? 'true' : 'false');
+              }
+            });
           }
-          /* Also check if target is an anchor-tag before a faq-item */
-          var next = target.nextElementSibling;
-          while (next && !next.classList.contains('faq-item')) {
-            next = next.nextElementSibling;
-          }
-          if (next && next.classList.contains('faq-item')) {
-            next.classList.add('expanded');
-            var h2n = next.querySelector('h2');
-            if (h2n) h2n.setAttribute('aria-expanded', 'true');
+          if (i < items.length) {
+            setTimeout(processChunk, 0);
+          } else {
+            finishSetup();
           }
         }
-      }
-      expandFromHash();
-      window.addEventListener('hashchange', expandFromHash);
-    })();
+        processChunk();
 
-    /* Assign data-category to grinder and super-auto section items */
-    (function() {
-      var gs = document.getElementById('grinder-section');
-      if (gs) gs.querySelectorAll('.faq-item').forEach(function(item) { item.dataset.category = 'grinder'; });
-      var sa = document.getElementById('superauto-section');
-      if (sa) sa.querySelectorAll('.faq-item').forEach(function(item) { item.dataset.category = 'super-auto'; });
-    })();
-
-    /* Inject booking CTA into each faq-answer */
-    (function() {
-      document.querySelectorAll('.faq-answer').forEach(function(answer) {
-        var cta = document.createElement('div');
-        cta.className = 'faq-cta';
-        cta.innerHTML = 'Still stuck? We\u2019d love to take a look. <a href="https://www.kanencoffee.com/book-appointment" target="_blank" rel="noopener">Book a repair \u2192</a>';
-        answer.appendChild(cta);
-      });
-    })();
-
-    /* Category filter bar */
-    (function() {
-      var bar = document.getElementById('faq-filter-bar');
-      if (!bar) return;
-      bar.addEventListener('click', function(e) {
-        var btn = e.target.closest('.filter-btn');
-        if (!btn) return;
-        bar.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
-        btn.classList.add('active');
-        var filter = btn.dataset.filter;
-        document.querySelectorAll('.faq-item').forEach(function(item) {
-          if (filter === 'all') {
-            item.classList.remove('hidden');
-          } else {
-            if (item.dataset.category === filter) {
-              item.classList.remove('hidden');
-            } else {
-              item.classList.add('hidden');
-              item.classList.remove('expanded');
-              var h2 = item.querySelector('h2');
-              if (h2) h2.setAttribute('aria-expanded', 'false');
+        function finishSetup() {
+          /* Auto-expand from URL hash */
+          function expandFromHash() {
+            var hash = window.location.hash.replace('#', '');
+            if (!hash) return;
+            var target = document.getElementById(hash);
+            if (target) {
+              var faqItem = target.closest('.faq-item') || target;
+              if (faqItem.classList.contains('faq-item')) {
+                faqItem.classList.add('expanded');
+                var h2 = faqItem.querySelector('h2');
+                if (h2) h2.setAttribute('aria-expanded', 'true');
+              }
+              var next = target.nextElementSibling;
+              while (next && !next.classList.contains('faq-item')) { next = next.nextElementSibling; }
+              if (next && next.classList.contains('faq-item')) {
+                next.classList.add('expanded');
+                var h2n = next.querySelector('h2');
+                if (h2n) h2n.setAttribute('aria-expanded', 'true');
+              }
             }
           }
-        });
-        /* When filtering, also show/hide the section headings */
-        ['grinder-section', 'superauto-section'].forEach(function(secId) {
-          var sec = document.getElementById(secId);
-          if (!sec) return;
-          var secFilter = secId === 'grinder-section' ? 'grinder' : 'super-auto';
-          sec.style.display = (filter === 'all' || filter === secFilter) ? '' : 'none';
-        });
-      });
+          expandFromHash();
+          window.addEventListener('hashchange', expandFromHash);
+
+          /* Assign data-category */
+          var gs = document.getElementById('grinder-section');
+          if (gs) gs.querySelectorAll('.faq-item').forEach(function(item) { item.dataset.category = 'grinder'; });
+          var sa = document.getElementById('superauto-section');
+          if (sa) sa.querySelectorAll('.faq-item').forEach(function(item) { item.dataset.category = 'super-auto'; });
+
+          /* Category filter bar */
+          var bar = document.getElementById('faq-filter-bar');
+          if (bar) {
+            bar.addEventListener('click', function(e) {
+              var btn = e.target.closest('.filter-btn');
+              if (!btn) return;
+              bar.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
+              btn.classList.add('active');
+              var filter = btn.dataset.filter;
+              document.querySelectorAll('.faq-item').forEach(function(item) {
+                if (filter === 'all') {
+                  item.classList.remove('hidden');
+                } else if (item.dataset.category === filter) {
+                  item.classList.remove('hidden');
+                } else {
+                  item.classList.add('hidden');
+                  item.classList.remove('expanded');
+                  var h2 = item.querySelector('h2');
+                  if (h2) h2.setAttribute('aria-expanded', 'false');
+                }
+              });
+              ['grinder-section', 'superauto-section'].forEach(function(secId) {
+                var sec = document.getElementById(secId);
+                if (!sec) return;
+                var secFilter = secId === 'grinder-section' ? 'grinder' : 'super-auto';
+                sec.style.display = (filter === 'all' || filter === secFilter) ? '' : 'none';
+              });
+            });
+          }
+
+          /* Inject booking CTAs \u2014 batched via fragment to avoid 53 reflows */
+          setTimeout(function() {
+            document.querySelectorAll('.faq-answer').forEach(function(answer) {
+              var cta = document.createElement('div');
+              cta.className = 'faq-cta';
+              cta.innerHTML = 'Still stuck? We\u2019d love to take a look. <a href="https://www.kanencoffee.com/book-appointment" target="_blank" rel="noopener">Book a repair \u2192</a>';
+              answer.appendChild(cta);
+            });
+          }, 0);
+        }
+      }
+
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(setupFAQ, { timeout: 2000 });
+      } else {
+        setTimeout(setupFAQ, 100);
+      }
     })();
 
     /* Back to top */
