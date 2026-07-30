@@ -78,9 +78,9 @@
           "@type": "FAQPage",
           "mainEntity": [
             {"@type":"Question","name":"What's the difference between the Breville 900XL and 920XL Dual Boiler?","acceptedAnswer":{"@type":"Answer","text":"The 900XL (original, 2012) and 920XL (revised, 2017) are mechanically 95% identical — same dual-boiler layout, same pump, same pre-infusion system. The 920XL adds: improved water tank seal (the 900XL had a known leak issue), refined PID algorithm, updated pre-infusion profile options, redesigned drip tray. The 920 also has slightly better thermal stability between shots. Most internal parts are interchangeable. If your 900XL runs well, there's no need to upgrade; if you're buying used, go 920XL."}},
-            {"@type":"Question","name":"How long do Breville Dual Boilers last?","acceptedAnswer":{"@type":"Answer","text":"With filtered water and regular descaling: 8–12 years of daily use. Without: 4–6 years. The limiting parts are typically the brew pump (Ulka vibratory, ~$90 replacement), the NTC temperature sensors (drift over time), and the 3-way solenoid valve. All are user-serviceable with basic tools. Full rebuild cost around year 8 is typically $250 in parts — far cheaper than buying a new dual boiler at that point."}},
-            {"@type":"Question","name":"Will Kanen replace the PCB on a Breville Dual Boiler?","acceptedAnswer":{"@type":"Answer","text":"Yes, but only as a last resort. Before swapping the main PCB ($220 part), we check: power supply, all NTC sensors, all thermal fuses, both pumps, all solenoids, and the display ribbon cable. 70% of 'dead PCB' diagnoses turn out to be a blown thermal fuse or a disconnected sensor — a $5 fix. If all passives check good and the PCB truly doesn't respond, we'll replace it."}},
-            {"@type":"Question","name":"Where are the NTC sensors on a Breville Dual Boiler?","acceptedAnswer":{"@type":"Answer","text":"There are 3 NTC sensors: (1) brew boiler sensor, threaded into the brew boiler body near the group head side; (2) steam boiler sensor, threaded into the steam boiler top; (3) group head sensor, clipped to the brass group near the shower screen. All three report to the main PCB and are critical for PID temperature control. If any NTC reads open or short, the machine shows a generic error or simply won't heat that boiler. Replacement: ~$18 per sensor, 60-minute bench job to access."}},
+            {"@type":"Question","name":"How long do Breville Dual Boilers last?","acceptedAnswer":{"@type":"Answer","text":"With filtered water and regular descaling: 8–12 years of daily use. Without: 4–6 years. The limiting parts are typically the brew pump (Ulka vibratory), the NTC temperature sensors (drift over time), and the 3-way solenoid valve. All are user-serviceable with basic tools. A full rebuild around year 8 is far cheaper than buying a new dual boiler at that point."}},
+            {"@type":"Question","name":"Will Kanen replace the PCB on a Breville Dual Boiler?","acceptedAnswer":{"@type":"Answer","text":"Yes, but only as a last resort. Before swapping the main PCB, we check: power supply, all NTC sensors, all thermal fuses, both pumps, all solenoids, and the display ribbon cable. 70% of 'dead PCB' diagnoses turn out to be a blown thermal fuse or a disconnected sensor — a simple fix. If all passives check good and the PCB truly doesn't respond, we'll replace it."}},
+            {"@type":"Question","name":"Where are the NTC sensors on a Breville Dual Boiler?","acceptedAnswer":{"@type":"Answer","text":"There are 3 NTC sensors: (1) brew boiler sensor, threaded into the brew boiler body near the group head side; (2) steam boiler sensor, threaded into the steam boiler top; (3) group head sensor, clipped to the brass group near the shower screen. All three report to the main PCB and are critical for PID temperature control. If any NTC reads open or short, the machine shows a generic error or simply won't heat that boiler. Replacement is a 60-minute bench job to access."}},
             {"@type":"Question","name":"How does the Breville Dual Boiler compare to the Rocket R58?","acceptedAnswer":{"@type":"Answer","text":"Similar concept, different execution. Breville Dual Boiler ($1500): direct-heated boilers, electronic PID, 54mm portafilter, vibration pump, integrated drip tray. Rocket R58 ($3200): thermosyphon from steam to brew, mechanical pressurestat + PID, 58mm E61 commercial portafilter, vibration or rotary pump. Breville wins on price, heat-up time (10 min vs. 25 min), and features (pre-infusion profiles, programmable shot temp). Rocket wins on long-term serviceability, thermal stability, cosmetic build quality, and the tactile E61 group experience. Both pull excellent shots."}}
           ]
         },
@@ -192,7 +192,7 @@
                     <p>The 3-way solenoid releases residual pressure from the group head at end of shot, dumping to the drip tray. When it fails, pressure stays in the group and the puck becomes soupy.</p>
                     <p>We have a <strong><a href="https://help.kanencoffee.com/breville-solenoid-valve.html">dedicated Breville 3-way solenoid valve replacement page</a></strong> with step-by-step photos and part numbers. Summary:</p>
                     <ul>
-                        <li>Part: Breville SP0010098 or aftermarket equivalent, ~$35</li>
+                        <li>Part: Breville SP0010098 or aftermarket equivalent</li>
                         <li>Access from the top after removing the cover</li>
                         <li>90-minute bench job for a first-timer, 45 minutes if you've done it before</li>
                         <li>Test after: shot should produce a dry cake puck that knocks out cleanly</li>
@@ -216,8 +216,8 @@
                     <h2>Steam Boiler Not Heating</h2>
                     <p><strong>Diagnostic tree:</strong></p>
                     <ul>
-                        <li><strong>Panel shows "STM" but no heat:</strong> thermal fuse or element. Measure element resistance — should read 10–15 Ω. Open circuit = element failed (~$80 part, 2-hour bench job)</li>
-                        <li><strong>Panel shows no STM activity:</strong> steam boiler NTC has failed open — PCB disables the element as a safety. Replace NTC first (~$18)</li>
+                        <li><strong>Panel shows "STM" but no heat:</strong> thermal fuse or element. Measure element resistance — should read 10–15 Ω. Open circuit = element failed (2-hour bench job)</li>
+                        <li><strong>Panel shows no STM activity:</strong> steam boiler NTC has failed open — PCB disables the element as a safety. Replace NTC first</li>
                         <li><strong>Steam was working, now isn't:</strong> thermal fuse trip. Most commonly caused by running the boiler dry during descale rinse</li>
                         <li><strong>Safety check before opening:</strong> unplug and let sit 30 min to discharge any steam pressure. The steam boiler is 260°F under pressure when hot — dangerous to open immediately after use</li>
                     </ul>
@@ -227,8 +227,8 @@
                     <h2>Brew Boiler Not Heating</h2>
                     <p><strong>Same causes as steam boiler, different circuit.</strong></p>
                     <ul>
-                        <li>Brew NTC failure: replace first ($18)</li>
-                        <li>Brew element failure: measure resistance, replace if open ($70 part)</li>
+                        <li>Brew NTC failure: replace first</li>
+                        <li>Brew element failure: measure resistance, replace if open</li>
                         <li>Brew thermal fuse: trips if boiler runs dry. Replace with exact spec (167°C one-time fuse)</li>
                         <li>Group head NTC failure: PID can disable brew heating if the group sensor is dead — check this third NTC as well</li>
                         <li><strong>PID shows temperature but boiler never reaches it:</strong> relay stuck open on the PCB — PCB-level repair</li>
@@ -272,11 +272,11 @@
                     <h2>Water Tank Leak (Common on 920XL)</h2>
                     <p><strong>The 920XL tank seal is a known weak point.</strong> Symptom: water pools under the machine even when the machine is idle.</p>
                     <ul>
-                        <li><strong>Tank gasket:</strong> the rubber ring on the tank's bottom valve. Dries, cracks, or warps over years. Replace every 2–3 years (~$8 part)</li>
+                        <li><strong>Tank gasket:</strong> the rubber ring on the tank's bottom valve. Dries, cracks, or warps over years. Replace every 2–3 years</li>
                         <li><strong>Tank valve pin:</strong> the spring-loaded pin that the chassis depresses to open the tank. If corroded, tank seats but doesn't seal. Inspect and clean</li>
                         <li><strong>Internal tank line:</strong> the silicone hose from tank valve to pump can pinch or crack. Inspect when the top cover is off</li>
                         <li><strong>Chassis nipple:</strong> the fitting on the machine side that the tank valve seats against. Check for deformation or residue</li>
-                        <li>If all seals replaced and tank still leaks, tank itself is cracked — replacement tank is ~$35</li>
+                        <li>If all seals replaced and tank still leaks, tank itself is cracked and needs replacement</li>
                     </ul>
                 </li>
 
