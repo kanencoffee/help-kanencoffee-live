@@ -1,0 +1,39 @@
+{
+  "_readme": "CANONICAL Kanen Coffee repair pricing — single source of truth. Confirmed by Sam 2026-07-31, grounded in 12 months of QuickBooks invoices. When prices change, update THIS file first, then sweep help.kanencoffee.com pages AND kanencoffee.com Shopify pages (repairs, repairs-<brand>, faq, from-youtube, oakland/sf pages) — visible text AND FAQ JSON-LD schema together.",
+  "updated": "2026-07-31",
+  "deposits": {
+    "home": 185,
+    "jura_lamarzocco_miele": 225,
+    "commercial": 600,
+    "policy": "Non-refundable. Applied toward the final repair bill. Separate from diagnostic charges."
+  },
+  "hourly_rates": {
+    "standard_labor_and_diagnostic": 185,
+    "jura_lamarzocco_miele": 225
+  },
+  "most_repairs": {
+    "range": [300, 650],
+    "median": 450,
+    "basis": "QB completed-repair invoices 2025-08..2026-07, n=554, medians rounded down to nearest $50"
+  },
+  "brand_medians": {
+    "breville": 700,
+    "jura": 500,
+    "delonghi": 400,
+    "la_marzocco_home": 950,
+    "rancilio": 450,
+    "la_pavoni": 450
+  },
+  "tune_up_medians": {
+    "semi_automatic": 450,
+    "dual_boiler": 750,
+    "jura": 500,
+    "super_automatic": 350
+  },
+  "services": {
+    "pump_replacement": {"range": [450, 750], "median": 600},
+    "boiler_flush": {"from": 185},
+    "leak_repair": {"range": [200, 400]}
+  },
+  "parts_policy": "Only publish part prices for products actually sold in the Shopify store, at the store price (e.g. Ulka EX5 $44, Breville BES870XL solenoid $95, Gaggia Classic solenoid $74.95, Silvia Tune-Up Kit $19.99). Never publish installed-part or third-party part prices."
+}
