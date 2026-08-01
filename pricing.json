@@ -53,7 +53,8 @@
         200,
         400
       ]
-    }
+    },
+    "vibratory_pump_part": 75
   },
-  "parts_policy": "Only publish part prices for products actually sold in the Shopify store, at the store price (e.g. Ulka EX5 $44, Breville BES870XL solenoid $95, Gaggia Classic solenoid $74.95, Silvia Tune-Up Kit $19.99). Never publish installed-part or third-party part prices."
+  "parts_policy": "Only publish part prices for products actually sold in the Shopify store, at the store price (e.g. Ulka EX5 $75, Breville BES870XL solenoid $125, Gaggia Classic solenoid $74.95, Silvia Tune-Up Kit $19.99). Never publish installed-part or third-party part prices."
 }
