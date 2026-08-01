@@ -1,3 +1,11 @@
+# NOTE: GitHub Pages does not read this file — it is a Cloudflare Pages /
+# Netlify convention. Nothing here is served today; verify with
+#   curl -sSI https://help.kanencoffee.com/ | grep -i content-security-policy
+# To make it effective, either move hosting to Cloudflare Pages, or proxy the
+# help CNAME through Cloudflare (it is DNS-only today) and add a Transform Rule.
+# Until then the per-page <meta http-equiv="Content-Security-Policy"> tags are
+# the only enforced policy; keep the CSP below in sync with them.
+
 /*
   X-Frame-Options: DENY
   X-XSS-Protection: 0
@@ -7,4 +15,4 @@
   Strict-Transport-Security: max-age=31536000; includeSubDomains
 
 /*.html
-  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://tagmanager.google.com https://www.google-analytics.com https://region1.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://region1.google-analytics.com https://stats.g.doubleclick.net; font-src 'self' https://fonts.gstatic.com; frame-src https://www.youtube.com https://www.googletagmanager.com https://tagmanager.google.com; object-src 'none'; frame-ancestors 'none'; base-uri 'self';
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://tagmanager.google.com https://www.google-analytics.com https://region1.google-analytics.com https://www.clarity.ms https://*.clarity.ms; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://region1.google-analytics.com https://stats.g.doubleclick.net https://www.clarity.ms https://*.clarity.ms; font-src 'self' https://fonts.gstatic.com; frame-src https://www.youtube.com https://www.youtube-nocookie.com https://www.googletagmanager.com https://tagmanager.google.com; object-src 'none'; frame-ancestors 'none'; base-uri 'self';
