@@ -50,6 +50,15 @@
     gtag('config', 'G-ZH5VRNVL50', {
         linker: { domains: ['kanencoffee.com', 'www.kanencoffee.com', 'shop.kanencoffee.com', 'help.kanencoffee.com'], accept_incoming: true }
       });
+    /* 2026-09-15: second GA4 stream. G-ZH5VRNVL50 reports to a property nobody at
+       Kanen can open; G-K0522MR5KP is the "Kanen Coffee — Help Center" stream on
+       property 293492157, the same property as the online store. Sending to both
+       loses no history and finally makes help traffic — and the
+       help_site_conversion_click event in analytics-events.v1.js — readable, with
+       store<->help sessions stitched by the shared linker. */
+    gtag('config', 'G-K0522MR5KP', {
+        linker: { domains: ['kanencoffee.com', 'www.kanencoffee.com', 'shop.kanencoffee.com', 'help.kanencoffee.com'], accept_incoming: true }
+      });
     </script>
     <script type="application/ld+json">
     {
