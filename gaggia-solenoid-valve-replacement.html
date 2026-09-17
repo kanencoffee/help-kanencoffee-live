@@ -30,8 +30,13 @@
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
+      /* 2026-09-16: analytics_storage defaults to granted at the site owner's
+         direction. Previously denied with no banner and no consent update
+         anywhere, so every hit carried gcs=G100 and GA4 never reported real
+         sessions - Search Console saw 937 clicks/28d against 105 GA4 sessions.
+         ad_* deliberately stay denied: only analytics was blocking reporting. */
       gtag('consent', 'default', {
-        'analytics_storage': 'denied',
+        'analytics_storage': 'granted',
         'ad_storage': 'denied',
         'ad_user_data': 'denied',
         'ad_personalization': 'denied',
