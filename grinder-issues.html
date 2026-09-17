@@ -70,6 +70,14 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
+    /* 2026-09-16: an explicit consent UPDATE, not just the default above.
+       GTM-WFP77FBF loads on this site through the Cloudflare /metrics/ gateway and
+       its "Consent Mode - Default Denied" tag pushes a second consent default with
+       analytics_storage denied. A default cannot override another default, so hits
+       went out as gcs=G100 even with the page default set to granted. The store
+       resolves this with a cookie banner that issues an update; this site has no
+       banner, so the update is issued directly. */
+    gtag('consent', 'update', { 'analytics_storage': 'granted' });
     gtag('config', 'G-ZH5VRNVL50', {
         linker: { domains: ['kanencoffee.com', 'www.kanencoffee.com', 'shop.kanencoffee.com', 'help.kanencoffee.com'], accept_incoming: true }
       });
