@@ -166,6 +166,26 @@
         footer a { color: #ffb39e; text-decoration: none; }
         @media (max-width: 968px) { .container { grid-template-columns: 1fr; } .sidebar { position: static; } }
 
+    
+    /* 2026-09-23: in-article CTA. The existing .cta-box lives in the sidebar, which
+       goes static below 968px and therefore stacks BELOW the whole article on mobile
+       - the majority of this site's search traffic. Help pages earned ~929 clicks in
+       Aug 2026 with near-zero measured click-through to the store. This puts one
+       contextual part link and one booking link above the fix instructions.
+       Clicks are picked up automatically by analytics-events.v1.js. */
+    .inline-help-cta{display:flex;flex-wrap:wrap;align-items:center;gap:14px;
+      justify-content:space-between;background:#f6f3f1;border:1px solid #e0d8d3;
+      border-left:4px solid #a83a1f;border-radius:8px;padding:16px 18px;margin:22px 0}
+    .inline-help-cta p{margin:0;font-weight:600;color:#33302e}
+    .inline-help-cta .ihc-actions{display:flex;flex-wrap:wrap;gap:10px}
+    .inline-help-cta a{display:inline-block;padding:10px 16px;border-radius:6px;
+      text-decoration:none;font-weight:700;font-size:.95em}
+    .inline-help-cta a.ihc-primary{background:#a83a1f;color:#fff}
+    .inline-help-cta a.ihc-secondary{background:#fff;color:#8f3119;border:2px solid #a83a1f}
+    .inline-help-cta a:focus-visible{outline:3px solid #1a5fb4;outline-offset:2px}
+    @media (max-width:560px){.inline-help-cta{flex-direction:column;align-items:stretch}
+      .inline-help-cta .ihc-actions{flex-direction:column}
+      .inline-help-cta a{text-align:center}}
     </style>
   <!-- Security headers (meta equivalents) -->
   <meta name="referrer" content="strict-origin-when-cross-origin">
@@ -194,7 +214,15 @@
 
             <ul class="problem-list">
                 <li class="problem-item">
-                    <h2>Piston Seal Leak (Water Past the Piston)</h2>
+                    <div class="inline-help-cta">
+<p>Need the part, or want us to handle it?</p>
+<div class="ihc-actions">
+<a class="ihc-primary" href="https://kanencoffee.com/collections/espresso-machine-parts">Shop espresso machine parts</a>
+<a class="ihc-secondary" href="https://kanencoffee.com/pages/book-appointment">Book a repair</a>
+</div>
+</div>
+
+<h2>Piston Seal Leak (Water Past the Piston)</h2>
                     <p><strong>Symptom:</strong> water squirts up past the piston when you lower the lever, puck is wet with diluted coffee, or the lever feels soft and pressureless.</p>
                     <p><strong>Fix — full seal kit:</strong></p>
                     <ul>
